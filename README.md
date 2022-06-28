@@ -24,3 +24,6 @@ plotcluster(X,cluster);
 [ Accuracy, NMI, ARI, Fscore, JI, RI] = ClustEval(ref, cluster);
 
 ```
+# License
+
+This project is covered under the Apache 2.0 License.
