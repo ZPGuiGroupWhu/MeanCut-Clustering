@@ -12,7 +12,7 @@ Download the code and run the 'main' file in the root directory.***To be noted, 
 
 ```ruby
 %% Input the data
-data = textread('Data/SyntheticDatasets/DS9.txt');
+data = textread('Synthetic Datasets/DS1.txt');
 [n,m] = size(data);
 X = data(:,1:2);
 ref = data(:,3);
@@ -26,7 +26,7 @@ ref = data(:,3);
 % DS8: knum = 20; percentile = 0.7; noiseT = 0;
 % DS9: knum = 20; percentile = 0.3; noiseT = 0;
 knum = 20;
-percentile = 0.3;
+percentile = 0;
 noiseT = 0;
 [cluster] = ImprovedMeanCut(X, knum, percentile, noiseT);
 
