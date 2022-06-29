@@ -1,41 +1,46 @@
-function [ ] = plotcluster( X,a3 )  
-n = length(a3);
+function [ ] = plotcluster(X,a3 )  
+n=length(a3);
 for i=1:n
     if(a3(i)==0||a3(i)==-1)
         plot(X(i,1),X(i,2),'k*','markersize',5);
         hold on;
     elseif(a3(i)==9)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.4,0],'markeredgecolor',[1,0.4,0],'markersize',5);
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.5,0],'markeredgecolor',[1,0.5,0],'markersize',5);
         hold on;
-    elseif(a3(i)==6)
+    elseif(a3(i)==2)
+%         plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.4,0],'markeredgecolor',[1,0.4,0],'markersize',5);
+%         hold on;
           plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0,0],'markeredgecolor',[1,0,0],'markersize',5);
           hold on;
-    elseif(a3(i)==2)
-          plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.9,0.1],'markeredgecolor',[0,0.9,0.1],'markersize',5);
+    elseif(a3(i)==3)
+%         plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.27,0],'markeredgecolor',[1,0.27,0],'markersize',5);
+%         hold on;
+          plot(X(i,1),X(i,2),'o','markerfacecolor',[0,1,0],'markeredgecolor',[0,1,0],'markersize',5);
           hold on;
     elseif(a3(i)==5)
-          plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0,1],'markeredgecolor',[0,0,1],'markersize',5);
-          hold on;
-    elseif(a3(i)==7)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[0.5,0,0.5],'markeredgecolor',[0.5,0,0.5],'markersize',5);
-        hold on;
-    elseif(a3(i)==3)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.9,0],'markeredgecolor',[1,0.9,0],'markersize',5);
-        hold on;
-    elseif(a3(i)==8)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.6,0],'markeredgecolor',[0,0.6,0],'markersize',5);
-        hold on;
-    elseif(a3(i)==10)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.6,0.6],'markeredgecolor',[0,0.6,0.6],'markersize',5);
+         plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0,1],'markeredgecolor',[1,0,1],'markersize',5);
+%         plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.1,0],'markeredgecolor',[1,0.1,0],'markersize',5);
         hold on;
     elseif(a3(i)==4)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.4,0.8],'markeredgecolor',[1,0.4,0.8],'markersize',5);
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0,0.5],'markeredgecolor',[1,0,0.5],'markersize',5);
+        hold on;
+    elseif(a3(i)==8)
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[0.5,0,1],'markeredgecolor',[0.5,0,1],'markersize',5);
+        hold on;
+    elseif(a3(i)==6)
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.6,0],'markeredgecolor',[0,0.6,0],'markersize',5);
+        hold on;
+    elseif(a3(i)==7)
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[0.1,0.7,0.9],'markeredgecolor',[0.1,0.7,0.9],'markersize',5);
+        hold on;
+    elseif(a3(i)==10)
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[0.9,0,0.4],'markeredgecolor',[0.9,0,0.4],'markersize',5);
         hold on;
      elseif(a3(i)==1)
-         plot(X(i,1),X(i,2),'o','markerfacecolor',[0.1,0.6,0.9],'markeredgecolor',[0.1,0.6,0.9],'markersize',5);
+         plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.5,1],'markeredgecolor',[0,0.5,1],'markersize',5);
          hold on;
     elseif(a3(i)==11)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[0,1,0],'markeredgecolor',[0,1,0],'markersize',5);
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[0,0.7,0],'markeredgecolor',[0,0.7,0],'markersize',5);
         hold on;
     elseif(a3(i)==12)
         plot(X(i,1),X(i,2),'o','markerfacecolor',[0.9,0,0.5],'markeredgecolor',[0.9,0,0.5],'markersize',5);
@@ -68,7 +73,7 @@ for i=1:n
         plot(X(i,1),X(i,2),'o','markerfacecolor',[0.6,0.2,0.8],'markeredgecolor',[0.6,0.2,0.8],'markersize',5);
         hold on;  
     elseif(a3(i)==22)
-        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.1,0.18],'markeredgecolor',[1,0.1,0.18],'markersize',5);
+        plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.5,0],'markeredgecolor',[1,0.5,0],'markersize',5);
         hold on; 
     elseif(a3(i)==23)
         plot(X(i,1),X(i,2),'o','markerfacecolor',[1,0.1,0.8],'markeredgecolor',[1,0.1,0.8],'markersize',5);
@@ -98,7 +103,7 @@ for i=1:n
         plot(X(i,1),X(i,2),'o','markerfacecolor','c','markeredgecolor','c','markersize',5);
         hold on; 
     elseif(a3(i)==32)
-        plot(X(i,1),X(i,2),'o','markerfacecolor','r','markeredgecolor','r','markersize',5);
+        plot(X(i,1),X(i,2),'o','markerfacecolor','k','markeredgecolor','k','markersize',5);
         hold on; 
     elseif(a3(i)>32&&mod(a3(i),6)==0)
         plot(X(i,1),X(i,2),'o','markerfacecolor','g','markeredgecolor','g','markersize',5);
