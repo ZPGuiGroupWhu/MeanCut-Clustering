@@ -1,5 +1,5 @@
 %% Input the data
-data = textread('Data/SyntheticDatasets/DS9.txt');
+data = textread('Data/Synthetic Datasets/DS9.txt');
 [n,m] = size(data);
 X = data(:,1:2);
 ref = data(:,3);
