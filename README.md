@@ -8,7 +8,7 @@ We propose a novel spectral clustering algorithm called MeanCut. It leverages th
 
 # How To Run
 
-Download the code and run the 'main' file in the root directory.
+Download the code and run the 'main' file in the root directory.***To be noted, we provide two use cases, i.e., UCI Cluster and Face Recognition. The corresponding code and sample datasets are included in the Apps folder.***
 
 ```ruby
 %% Input the data
