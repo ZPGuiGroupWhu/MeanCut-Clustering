@@ -8,7 +8,7 @@ We propose a novel spectral clustering algorithm called MeanCut. It leverages th
 
 # How To Run
 
-Download the code and run the 'main' file in the root directory.***In addition, we provide two use cases, i.e., UCI Cluster and Face Recognition. The corresponding code and sample datasets are included in the Apps folder. To be noted, the Deep Learning Toolbox should be installed in MATLAB before running the application of Face Recognition.***
+Download the code and run the 'main' file in the root directory. ***In addition, we provide two use cases, i.e., UCI Cluster and Face Recognition. The corresponding code and sample datasets are included in the Apps folder. To be noted, the Deep Learning Toolbox should be installed in MATLAB before running the application of Face Recognition.***
 
 ```ruby
 %% Input the data
