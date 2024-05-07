@@ -8,33 +8,39 @@ We propose a novel spectral clustering algorithm called MeanCut. It leverages th
 
 # How To Run
 
-Download the code and run the 'main' file in the root directory. ***In addition, we provide two use cases, i.e., UCI Cluster and Face Recognition. The corresponding code and sample datasets are included in the Apps folder. To be noted, the Deep Learning Toolbox should be installed in MATLAB before running the application of Face Recognition.***
+Download the code and run the 'main' file in the 'MeanCut' file. ***To be noted, the Deep Learning Toolbox should be installed in MATLAB before running the application of Face Recognition.***
 
-```ruby
-%% Input the data
-data = textread('Synthetic Datasets/DS1.txt');
-[n,m] = size(data);
-X = data(:,1:2);
-ref = data(:,3);
-
-%% Perform MeanCut algorithm
-% DS1,DS2,DS3: knum = 20; percentile = 0; noiseT = 0;
-% DS4: knum = 20; percentile = 0; noiseT = 20;
-% DS5: knum = 20; percentile = 0; noiseT = 50;
-% DS6: knum = 20; percentile = 0.7; noiseT = 0;
-% DS7: knum = 20; percentile = 0.8; noiseT = 0;
-% DS8: knum = 20; percentile = 0.7; noiseT = 0;
-% DS9: knum = 20; percentile = 0.3; noiseT = 0;
-knum = 20;
-percentile = 0;
-noiseT = 0;
-[cluster] = ImprovedMeanCut(X, knum, percentile, noiseT);
-
-%% Visualize and evaluate the result
-addpath ClusterEvaluation
-plotcluster(X,cluster);
-[ Accuracy, NMI, ARI, Fscore, JI, RI] = ClustEval(ref, cluster);
-
+The 'meancut' function provides multiple hyperparameters for user configuration as follows 
+```matlab
+function [cluster] = meancut (X, varargin)
+%   This is a novel spectal clustering algorithm based on path similarity and degree descent criterion. 
+%   This function returns cluster labels of the N by D matrix X. Each row in X represents an observation.
+% 
+%   Parameters are: 
+% 
+%   'k1'           - A non-negative integer specifying the number of nearest neighbors for DGF. 
+%                    It must be smaller than N.
+%                    Default: 20
+%   'k2'           - A non-negative integer specifying the number of nearest neighbors for MST. 
+%                    It must be smaller than N.
+%                    Default: 20
+%   'ratio'        - A positive scalar in [0,1] specifying the percentile of the number of boudanry 
+%                    points to the total number of points. 
+%                    Default: 0
+%   'Embed'        - Logical scalar. If true, project X with more than 5000 samples and 50 features
+%                    into a lower-dimensional space. 
+%                    Default: True
+%   'Normalize'    - Logical scalar. If true, scale X using min-max normalization. If features in 
+%                    X are on different scales, 'Normalize' should be set to true because the clustering 
+%                    process is based on nearest neighbors and features with large scales can override 
+%                    the contribution of features with small scales. 
+%                    Default: True
+%   'Noise'        - A non-negative integer specifying the threshold of a noisy cluster.
+%                    Default: 0
+%   'Kernel'       - Kernel function.
+%                    Default: 'Laplacian'
+%   'Bandwidth'    - A positive scalar specifying the bandwidth of the kernel function.
+%                    Default: 2
 ```
 # License
 
