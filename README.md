@@ -4,7 +4,7 @@
 
 We propose a novel spectral clustering algorithm called MeanCut. It leverages the path-based similarity to enhance intra-cluster associations, and is optimized greedily in degree descending order for a nondestructive graph partition. This algorithm enables the identification of arbitrary shaped clusters and is robust to noise. To reduce the computational complexity of similarity calculation, we transform optimal path search into generating the maximum spanning tree (MST), and develop a fast MST (FastMST) algorithm to further improve its time-efficiency. Moreover, we define a density gradient factor (DGF) for separating the weakly connected clusters.
 
-![image](https://github.com/ZPGuiGroupWhu/MeanCut-Clustering/blob/main/Pic/github.jpg)
+![image](https://github.com/ZPGuiGroupWhu/MeanCut-Clustering/blob/main/Pic/github.png)
 
 # How To Run
 
