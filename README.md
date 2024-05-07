@@ -42,6 +42,29 @@ function [cluster] = meancut (X, varargin)
 %   'Bandwidth'    - A positive scalar specifying the bandwidth of the kernel function.
 %                    Default: 2
 ```
+
+The 'main.m' file provides an example
+```matlab
+% Input data
+clear;
+data = textread('Synthetic Datasets/DS1.txt');
+
+% Obtain data size and true annotations
+[~, m] = size(data);
+ref = data(:, m);
+X = data(:, 1:m-1);
+
+% Perform the MeanCut algorithm
+cluster = meancut(X);
+
+% Evaluate the clustering accuracy
+addpath ClusterEvaluation
+[ACC, NMI, ARI, Fscore, JI, RI] = ClustEval(ref, cluster);
+
+% Plot the clustering results
+plotcluster2(X, cluster);
+```
+
 # License
 
 This project is covered under the Apache 2.0 License.
