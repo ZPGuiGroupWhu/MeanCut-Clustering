@@ -46,7 +46,7 @@ The 'main.m' file provides an example
 ```matlab
 %% Input the data
 clear;
-data = textread('Synthetic Datasets\DS4.txt');
+data = textread('Synthetic Datasets\DS1.txt');
 [~, m] = size(data);
 X = data(:, 1:m-1);
 ref = data(:, m);
