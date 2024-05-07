@@ -45,16 +45,15 @@ function [cluster] = meancut (X, varargin)
 
 The 'main.m' file provides an example
 ```matlab
-% Input data
+%% Input the data
 clear;
-data = textread('Synthetic Datasets/DS1.txt');
-
-% Obtain data size and true annotations
+data = textread('Synthetic Datasets\DS4.txt');
 [~, m] = size(data);
-ref = data(:, m);
 X = data(:, 1:m-1);
+ref = data(:, m);
 
-% Perform the MeanCut algorithm
+%% Perform the MeanCut algorithm
+% DS6, DS7, DS8: k1 = 20; ratio=0.2, 0.7, 0.3;
 cluster = meancut(X);
 
 % Evaluate the clustering accuracy
