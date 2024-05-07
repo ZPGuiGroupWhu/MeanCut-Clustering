@@ -1,8 +1,7 @@
 ![image](https://img.shields.io/badge/MATLAB-R2023a-red)
 # MeanCut: A Greedy-Optimized Graph Clustering via Path-based Similarity and Degree Descent Criterion
 
-
-We propose a novel spectral clustering algorithm called MeanCut. It leverages the path-based similarity to enhance intra-cluster associations, and is optimized greedily in degree descending order for a nondestructive graph partition. This algorithm enables the identification of arbitrary shaped clusters and is robust to noise. To reduce the computational complexity of similarity calculation, we transform optimal path search into generating the maximum spanning tree (MST), and develop a fast MST (FastMST) algorithm to further improve its time-efficiency. Moreover, we define a density gradient factor (DGF) for separating the weakly connected clusters.
+We propose a novel graph clustering algorithm. Our key contribution lies in developing an single-cluster-oriented graph cut function MeanCut and leveraging the degree descent criterion to greedily optimize MeanCut. It is theoretically proved that the degree descent criterion guarantees the global optimality under the premise of path-based similarity and predefined assumptions. Credit to the density gradient factor (DGF), MeanCut enables the effective separation of weakly connected clusters. A fast approximate maximum spanning tree (FastMST) improves the time efficiency of MST generation using a KNN-based sparse graph. The experimental results demonstrated that MeanCut presents distinct advantages in clustering accuracy, parameter robustness, and time scalability and exhibits remarkable potentials for downstream tasks.
 
 ![image](https://github.com/ZPGuiGroupWhu/MeanCut-Clustering/blob/main/Pic/github.png)
 
