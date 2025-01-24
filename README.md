@@ -59,7 +59,7 @@ cluster = meancut(X);
 addpath ClusterEvaluation
 [ACC, NMI, ARI, Fscore, JI, RI] = ClustEval(ref, cluster);
 
-% Plot the clustering results
+% Visualize the clustering results
 plotcluster2(X, cluster);
 ```
 
